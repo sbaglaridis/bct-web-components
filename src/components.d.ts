@@ -6,20 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-
+    interface BctAuthorBlock {
+        "avatar": string;
+        "name": string;
+        "text": string;
+        "url": string;
+    }
 }
 declare global {
+    interface HTMLBctAuthorBlockElement extends Components.BctAuthorBlock, HTMLStencilElement {
+    }
+    var HTMLBctAuthorBlockElement: {
+        prototype: HTMLBctAuthorBlockElement;
+        new (): HTMLBctAuthorBlockElement;
+    };
     interface HTMLElementTagNameMap {
+        "bct-author-block": HTMLBctAuthorBlockElement;
     }
 }
 declare namespace LocalJSX {
+    interface BctAuthorBlock {
+        "avatar"?: string;
+        "name"?: string;
+        "text"?: string;
+        "url"?: string;
+    }
     interface IntrinsicElements {
+        "bct-author-block": BctAuthorBlock;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "bct-author-block": LocalJSX.BctAuthorBlock & JSXBase.HTMLAttributes<HTMLBctAuthorBlockElement>;
         }
     }
 }
