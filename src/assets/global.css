@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #E5E5E5;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.47;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.py-3 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
