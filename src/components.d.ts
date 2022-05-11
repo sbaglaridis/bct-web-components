@@ -12,6 +12,12 @@ export namespace Components {
         "text": string;
         "url": string;
     }
+    interface BctSocials {
+        "facebook": string;
+        "instagram": string;
+        "twitter": string;
+        "youtube": string;
+    }
 }
 declare global {
     interface HTMLBctAuthorBlockElement extends Components.BctAuthorBlock, HTMLStencilElement {
@@ -20,8 +26,15 @@ declare global {
         prototype: HTMLBctAuthorBlockElement;
         new (): HTMLBctAuthorBlockElement;
     };
+    interface HTMLBctSocialsElement extends Components.BctSocials, HTMLStencilElement {
+    }
+    var HTMLBctSocialsElement: {
+        prototype: HTMLBctSocialsElement;
+        new (): HTMLBctSocialsElement;
+    };
     interface HTMLElementTagNameMap {
         "bct-author-block": HTMLBctAuthorBlockElement;
+        "bct-socials": HTMLBctSocialsElement;
     }
 }
 declare namespace LocalJSX {
@@ -31,8 +44,15 @@ declare namespace LocalJSX {
         "text"?: string;
         "url"?: string;
     }
+    interface BctSocials {
+        "facebook"?: string;
+        "instagram"?: string;
+        "twitter"?: string;
+        "youtube"?: string;
+    }
     interface IntrinsicElements {
         "bct-author-block": BctAuthorBlock;
+        "bct-socials": BctSocials;
     }
 }
 export { LocalJSX as JSX };
@@ -40,6 +60,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "bct-author-block": LocalJSX.BctAuthorBlock & JSXBase.HTMLAttributes<HTMLBctAuthorBlockElement>;
+            "bct-socials": LocalJSX.BctSocials & JSXBase.HTMLAttributes<HTMLBctSocialsElement>;
         }
     }
 }
