@@ -28,7 +28,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0"
+    "@stencil/core": "^2.13.0",
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -40,6 +41,7 @@
     "babel-loader": "^8.2.5",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
+    "nodemon": "^2.0.16",
     "puppeteer": "^10.0.0"
   },
   "license": "MIT"

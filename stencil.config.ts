@@ -1,4 +1,4 @@
-import { Config } from '@stencil/core';
+import {Config} from '@stencil/core';
 
 export const config: Config = {
   namespace: 'bct-web-components',
@@ -17,5 +17,8 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
+    {
+      type: 'dist-hydrate-script'
+    }
   ],
 };
